@@ -4,7 +4,9 @@ const bodyParser = require("body-parser");
 const cors = require("cors");
 const { router } = require("./src/routes/routes.js");
 
-mongoose.connect("mongodb://localhost:27017/Todo", {
+const MONGO_URI = "mongodb+srv://admin:admin1234@claster0.a88iq.mongodb.net/Todo?retryWrites=true&w=majority"
+
+mongoose.connect(MONGO_URI, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
   useCreateIndex: true,

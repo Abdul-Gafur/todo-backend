@@ -4,6 +4,7 @@ const { TodoController } = require("../controller/TodoController");
 const router = Router();
 const Todo = new TodoController();
 
-router.post("/todos/create", Todo.create);
+router.get("/todos", Todo.showAll);
+router.post("/todos", Todo.create);
 
 module.exports = { router };
