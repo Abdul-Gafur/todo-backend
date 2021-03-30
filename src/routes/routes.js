@@ -6,5 +6,6 @@ const Todo = new TodoController();
 
 router.get("/todos", Todo.showAll);
 router.post("/todos", Todo.create);
+router.put("/todos", Todo.update)
 
 module.exports = { router };
